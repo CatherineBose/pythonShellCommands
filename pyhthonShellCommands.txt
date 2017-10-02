@@ -1,0 +1,80 @@
+pip install Django - pip installs third party software like Django or flask 
+
+pip list - shows list of all software installed through pip
+pip2 list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+click (6.7)
+Flask (0.12.2)
+itsdangerous (0.24)
+Jinja2 (2.9.6)
+MarkupSafe (1.0)
+pip (9.0.1)
+pytz (2017.2)
+setuptools (36.5.0)
+Werkzeug (0.12.2)
+wheel (0.30.0)
+
+
+pip freeze (What's the difference between freeze and list?)
+catherines-MacBook-Pro:python catherinebose$ pip2 freeze
+click==6.7
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+pytz==2017.2
+Werkzeug==0.12.2
+
+First cd into your Desktop directory (cd ~/Desktop), then run this command: pip freeze > requirements.txt. What do you see when you ls? What's inside this file?
+It creates a txt file with the o/p of pip2 freeze in it
+cat requirements.txt 
+click==6.7
+Django==1.11.5
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+pytz==2017.2
+Werkzeug==0.12.2
+/// Explanation of the need to do the above command
+When you are using a virtualenv, you can specify a requirements.txt file to install all the dependencies.
+
+A typical usage:
+
+$ pip install -r requirements.txt
+The packages need to be in a specific format for pip to understand, which is
+
+feedparser==5.1.3
+wsgiref==0.1.2
+django==1.4.2
+...
+That is the "requirements format".
+
+Here, django==1.4.2 implies install django version 1.4.2 (even though the latest is 1.6.x). If you do not specify ==1.4.2, the latest version available would be installed.
+
+////
+
+pip uninstall Django : Uninstall the software
+ 
+pip show Django: shows details of the software like version
+pip2 show Flask
+Name: Flask
+Version: 0.12.2
+Summary: A microframework based on Werkzeug, Jinja2 and good intentions
+Home-page: http://github.com/pallets/flask/
+Author: Armin Ronacher
+Author-email: armin.ronacher@active-4.com
+License: BSD
+Location: /usr/local/lib/python2.7/site-packages
+Requires: itsdangerous, Werkzeug, Jinja2, click
+catherines-MacBook-Pro:python catherinebose$ pip2 freeze
+click==6.7
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+pytz==2017.2
+Werkzeug==0.12.2
+
+pip search Flask. 
+Shows all the packages within Flask
